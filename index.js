@@ -13,10 +13,7 @@ function updateClock(){
     let s = new Date().getSeconds();
     let ampm="AM";
 
-    m= m<10 ? "0" + m : m;
-    h= h<10 ? "0" + h : h;
-    s= s<10 ? "0" + s : s;
-
+    
 
     if (h>12)
         {
@@ -24,6 +21,11 @@ function updateClock(){
             ampm="PM";
 
         }
+
+        m= m<10 ? "0" + m : m;
+    h= h<10 ? "0" + h : h;
+    s= s<10 ? "0" + s : s;
+
     hour.innerText=h;
     minutes.innerText=m;
     seconds.innerText=s;
